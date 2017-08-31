@@ -14,7 +14,7 @@ namespace MorningExercises
         */
         public int[] ReturnDynamicallySizedArray(int i)
         {
-            return new int[i];
+            return null;
         }
     }
 }
