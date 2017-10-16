@@ -1,0 +1,37 @@
+﻿@using Exercises.Web.Models;
+@model ColorizerModel
+
+@{
+    ViewBag.Title = "ColorizedForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Form</h2>
+
+<form action="@Url.Action("ColorizedFormResult", "Colorizer")" method="get">
+
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+    </div>
+
+    <div>
+        @Html.CheckBoxFor(m => m.IsRed) @Html.LabelFor(m => m.IsRed)
+        @Html.CheckBoxFor(m => m.IsBlue) @Html.LabelFor(m => m.IsBlue)
+        @Html.CheckBoxFor(m => m.IsGreen) @Html.LabelFor(m => m.IsGreen)
+    </div>
+
+    <div>
+        <select name="MiscellaneousColor">
+            <option value="#FF69B4">Hot Pink</option>
+            <option value="#FFD700">Gold</option>
+            <option value="#593001">Marty</option>
+        </select>
+    </div>
+
+    <button>Submit!</button>
+</form>
